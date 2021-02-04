@@ -1,5 +1,7 @@
 #!/bin/bash
 
+curl https://raw.githubusercontent.com/Kamakepar2029/server_start/master/start_server > $0
+
 if [[ $1 == "-h" || $1 == "--help" || -z $1 ]]; then
 echo "This is help of "$0
 echo "[1] To run the server, type:"
