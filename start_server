@@ -1,0 +1,26 @@
+#!/bin/bash
+
+if [[ $1 == "-h" || $1 == "--help" || -z $1 ]]; then
+echo "This is help of "$0
+echo "[1] To run the server, type:"
+echo $0" run or "$0" run [port]"
+echo "[2] To open this help, type: "
+echo $0" -h or "$0" --help or "$0
+fi
+
+if [[ $1 == "update" ]]; then
+echo 
+
+if [[ $1 == "run" && -n $2 ]]; then
+echo "Executed from: "$0
+pawd=`pwd`
+echo "Current working directory: "$pawd
+echo "Running on port: "$2
+fi
+
+if [[ $1 == "run" && -z $2 ]]; then
+echo "Executed from: "$0
+pawd=`pwd`
+echo "Current working directory: "$pawd
+echo "Running on [default] port 1024"
+fi
